@@ -56,8 +56,8 @@ docs/_build/
 # PyBuilder
 target/
 
-hackathon_starter/hackathon/
-hackathon_starter/hackathon/*
+hackathon_starter/hackathon/migrations/
+hackathon_starter/hackathon/migrations/*
 
 
 .idea/
