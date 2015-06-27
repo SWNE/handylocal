@@ -40,7 +40,7 @@ from rest_framework.parsers import JSONParser
 
 # Models
 
-from hackathon.models import Snippet, Profile, Merchant, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, \
+from hackathon.models import Snippet, Profile, User, Merchant, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, \
     LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile, MerchantRating
 
 from hackathon.serializers import SnippetSerializer
@@ -357,17 +357,17 @@ def merchant(request, merchant_id):
 # RATE MERCHANT
 ###################
 
-def rate_merchant(request, merchant_id, user_id):
+def rate_merchant(request, merchant_id):
     merchant = get_object_or_404(Merchant, pk=merchant_id)
-    user = get_object_or_404(User, pk=user_id)
+    user = get_object_or_404(User, pk=request.user.id)
     rating = MerchantRating(merchant=merchant, user=user)
     context = {"rating": rating}
+    rating.save()
     return render(request, 'hackathon/rate_merchant.html', context)
 
 
 def post_rate_merchant(request, rating):
     # Save
-
     #Update Merchant Average Rating
     return render(request, 'hackathon/merchant.html', context)
 

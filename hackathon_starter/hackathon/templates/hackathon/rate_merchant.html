@@ -37,6 +37,21 @@
                 </tr>
             {% endfor %}
             </tbody>
+            <h2>'Rate the Merchant'</h2>
+            <form action = " {% url 'rate_merchant' merchant.id %}" method = "post">
+            {% csrf_token %}
+            <input type="radio" name="sex" value="male" checked>Male
+            <br>
+            <input type="radio" name="sex" value="female">Female
+            <br>
+            <input type="radio" name="sex" value="male" checked>Male
+            <br>
+            <input type="radio" name="sex" value="female">Female
+            <br>
+            <input type="radio" name="sex" value="male" checked>Male
+            <br>
+            <input type="submit" value="Vote" />
+            </form>
             </table>
         </div>
     </div>
