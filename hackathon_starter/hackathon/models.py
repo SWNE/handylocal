@@ -44,13 +44,20 @@ class Merchant(OrigUser):
     business_name = models.CharField(max_length=140, default='')
 
 
-class MerchantRatings(models.Model):
+class MerchantRating(models.Model):
     merchant = models.ForeignKey(Merchant)
     rating_ontime = models.IntegerField(default='-1')
     rating_value = models.IntegerField(default='-1')
     rating_reliability = models.IntegerField(default='-1')
     rating_quality = models.IntegerField(default='-1')
     user = models.ForeignKey(User)
+    text = models.TextField(max_length=200)
+
+    def __unicode__(self):
+        return "Merchant: " + self.merchant.name + " - Avg Rating: " + str(self.calculate_average())
+
+    def calculate_average(self):
+        return (self.rating_ontime + self.rating_quality + self.rating_reliability + self.rating_value) / 4.0
 
 
 class MerchantProfile(models.Model):
