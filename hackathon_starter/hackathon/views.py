@@ -39,8 +39,10 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
 # Models
+
 from hackathon.models import Snippet, Profile, Merchant, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, \
     LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile
+
 from hackathon.serializers import SnippetSerializer
 from hackathon.forms import UserForm, MerchantForm
 
@@ -82,7 +84,7 @@ def index(request):
                                                 scopes=getGithub.scopes, github_user=getGithub.username)
                     profile.save()
                     # profile = GithubProfile(user=new_user, access_token=getGithub.access_token, scopes=getGithub.scopes ,github_user=getGithub.username)
-                    #profile.save()
+                    # profile.save()
                 user = authenticate(username=getGithub.username + '_github', password='password')
                 login(request, user)
             elif profile_track == 'twitter':
@@ -335,8 +337,12 @@ def index(request):
 
 
 ###################
-# SEARCH
+# DISPLAY MERCHANT
 ###################
+def merchants(request):
+    merchants = Merchant.objects.all()
+    context = {'merchants': merchants}
+    return render(request, 'hackathon/merchants.html', context)
 
 
 ##################
@@ -349,7 +355,7 @@ def api_examples(request):
 
 
 #################
-#   STEAM API   #
+# STEAM API   #
 #################
 
 def steam(request):
@@ -863,6 +869,7 @@ def view_merchant(request):
     return render(request,
                   'hackathon/view_merchant.html',
                   {'merchants': result})
+
 
 def user_login(request):
     if request.method == 'POST':

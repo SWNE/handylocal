@@ -31,6 +31,7 @@ class Neighbourhood(models.Model):
     def __unicode__(self):
         return self.name + ", " + self.area.name
 
+
 class Service(models.Model):
     name = models.CharField(max_length=140, default='000-000-0000')
 
