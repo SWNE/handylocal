@@ -18,7 +18,11 @@ class Merchant(OrigUser):
     area = models.CharField(max_length=140, default='Johannesburg')
     phone_number = models.CharField(max_length=140, default='000-000-0000')
     talent =  models.CharField(max_length=140, default='')
-    rating =  models.CharField(max_length=2, default='0')
+    rating =  models.IntegerField(max_length=2, default='-1')
+    rating_ontime =  models.IntegerField(max_length=2, default='-1')
+    rating_value =  models.IntegerField(max_length=2, default='-1')
+    rating_reliability =  models.IntegerField(max_length=2, default='-1')
+    rating_qualit =  models.IntegerField(max_length=2, default='-1')
     business_name = models.CharField(max_length=140, default='')
 
 
