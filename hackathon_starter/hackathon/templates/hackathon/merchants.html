@@ -18,8 +18,8 @@
             <tbody>
             {% for item in merchants %}
                 <tr>
-                    <td>{{ item.username }}</td> 
-                    <td>{{ item.place.name}}</td>
+                    <td><a href="{% url 'merchant' item.id%}"> {{ item.username }}</a></td>
+                    <td>{{ item.place}}</td>
                     <td>{{ item.talent.name}}</td>
                     <td>{{ item.rating}}</td>
             {% endfor %}

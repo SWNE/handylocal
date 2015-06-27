@@ -41,10 +41,11 @@ from rest_framework.parsers import JSONParser
 # Models
 
 from hackathon.models import Snippet, Profile, Merchant, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, \
-    LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile
+    LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile, MerchantRating
 
 from hackathon.serializers import SnippetSerializer
 from hackathon.forms import UserForm, MerchantForm
+from django.shortcuts import get_object_or_404, render
 
 
 profile_track = None
@@ -345,6 +346,32 @@ def merchants(request):
     return render(request, 'hackathon/merchants.html', context)
 
 
+def merchant(request, merchant_id):
+    merchant = get_object_or_404(Merchant, pk=merchant_id)
+    ratings = MerchantRating.objects.all().filter(merchant=merchant)
+    context = {'merchant': merchant, "ratings": ratings}
+    return render(request, 'hackathon/merchant.html', context)
+
+
+###################
+# RATE MERCHANT
+###################
+
+def rate_merchant(request, merchant_id, user_id):
+    merchant = get_object_or_404(Merchant, pk=merchant_id)
+    user = get_object_or_404(User, pk=user_id)
+    rating = MerchantRating(merchant=merchant, user=user)
+    context = {"rating": rating}
+    return render(request, 'hackathon/rate_merchant.html', context)
+
+
+def post_rate_merchant(request, rating):
+    # Save
+
+    #Update Merchant Average Rating
+    return render(request, 'hackathon/merchant.html', context)
+
+
 ##################
 # API Examples  #
 ##################
@@ -359,7 +386,7 @@ def api_examples(request):
 #################
 
 def steam(request):
-    #Should link to test of Steam API example.
+    # Should link to test of Steam API example.
     key = '231E98D442E52B87110816C3D5114A1D'
     SteamUN = "Marorin"
     steamID = steamidpulling(SteamUN, key)
@@ -373,7 +400,7 @@ def steamDiscountedGames(request):
 
 
 #################
-#  FACEBOOK API #
+# FACEBOOK API #
 #################
 
 def facebook(request):
@@ -385,7 +412,7 @@ def facebook(request):
 
 
 #################
-#  GOOGLE API   #
+# GOOGLE API   #
 #################
 def googlePlus(request):
     userInfo = getGoogle.get_user_info()
@@ -393,7 +420,7 @@ def googlePlus(request):
 
 
 #################
-#  DROPBOX API  #
+# DROPBOX API  #
 #################
 def dropbox(request):
     userInfo = getDropbox.get_user_info()
