@@ -29,7 +29,7 @@ class Neighbourhood(models.Model):
     name = models.CharField(max_length=140, default='Parktown')
     # Override the __unicode__() method to return out something meaningful!
     def __unicode__(self):
-        return self.name
+        return self.name + ", " + self.area.name
 
 
 class Merchant(OrigUser):
@@ -44,8 +44,8 @@ class Merchant(OrigUser):
     business_name = models.CharField(max_length=140, default='')
 
 
-class Rating(models.Model):
-    merchant = models.ForeignKey(Merchant)
+class MerchantRating(models.Model):
+    merchant = models.ForeignKey(Merchant,null=True)
     rating_ontime = models.IntegerField(default='-1')
     rating_value = models.IntegerField(default='-1')
     rating_reliability = models.IntegerField(default='-1')
@@ -54,7 +54,7 @@ class Rating(models.Model):
     text = models.TextField(max_length=200)
 
     def __unicode__(self):
-        return "Merchant: " + self.merchant.name + " - Avg Rating: " + str(self.calculate_average())
+        return "Merchant: " + self.merchant.username + " - Avg Rating: " + str(self.calculate_average())
 
     def calculate_average(self):
         return (self.rating_ontime + self.rating_quality + self.rating_reliability + self.rating_value) / 4.0
