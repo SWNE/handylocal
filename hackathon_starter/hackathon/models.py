@@ -1,34 +1,66 @@
 from django.db import models
 from django.contrib.auth.models import User as OrigUser
 
+
 class User(OrigUser):
     area = models.CharField(max_length=140, default='Johannesburg')
     phone_number = models.CharField(max_length=140, default='000-000-0000')
+
 
 # Create your models here.
 class UserProfile(models.Model):
     # This line is required. Links UserProfile to a User model instance.
     user = models.OneToOneField(User)
-    
+
     # Override the __unicode__() method to return out something meaningful!
     def __unicode__(self):
         return self.user.username
 
-class Merchant(OrigUser):
+
+class Area(models.Model):
+    name = models.CharField(max_length=140, default='Johannesburg')
+    # Override the __unicode__() method to return out something meaningful!
+    def __unicode__(self):
+        return self.name
+
+
+class Neighbourhood(models.Model):
+    area = models.ForeignKey(Area)
+    name = models.CharField(max_length=140, default='Parktown')
+    # Override the __unicode__() method to return out something meaningful!
+    def __unicode__(self):
+        return self.name
+
+
+class Merchant(models.Model):
     area = models.CharField(max_length=140, default='Johannesburg')
     phone_number = models.CharField(max_length=140, default='000-000-0000')
-    talent =  models.CharField(max_length=140, default='')
-    rating =  models.CharField(max_length=2, default='0')
+    talent = models.CharField(max_length=140, default='')
+    rating = models.IntegerField(default='-1')
+    rating_ontime = models.IntegerField(default='-1')
+    rating_value = models.IntegerField(default='-1')
+    rating_reliability = models.IntegerField(default='-1')
+    rating_quality = models.IntegerField(default='-1')
     business_name = models.CharField(max_length=140, default='')
+
+
+class Ratings(models.Model):
+    merchant = models.ForeignKey(Merchant)
+    rating_ontime = models.IntegerField(default='-1')
+    rating_value = models.IntegerField(default='-1')
+    rating_reliability = models.IntegerField(default='-1')
+    rating_quality = models.IntegerField(default='-1')
+    user = models.ForeignKey(User)
 
 
 class MerchantProfile(models.Model):
     # This line is required. Links UserProfile to a User model instance.
     merchant = models.OneToOneField(Merchant)
-    
+
     # Override the __unicode__() method to return out something meaningful!
     def __unicode__(self):
         return self.merchant.username
+
 
 class Profile(models.Model):
     user = models.ForeignKey(User)
@@ -37,6 +69,7 @@ class Profile(models.Model):
 
     def __unicode__(self):
         return unicode(self.user)
+
 
 class GithubProfile(models.Model):
     user = models.ForeignKey(User)
@@ -47,6 +80,7 @@ class GithubProfile(models.Model):
     def __unicode__(self):
         return unicode(self.user)
 
+
 class TumblrProfile(models.Model):
     user = models.ForeignKey(User)
     tumblr_user = models.CharField(max_length=200)
@@ -56,6 +90,7 @@ class TumblrProfile(models.Model):
     def __unicode__(self):
         return unicode(self.user)
 
+
 class InstagramProfile(models.Model):
     user = models.ForeignKey(User)
     instagram_user = models.CharField(max_length=200)
@@ -63,6 +98,7 @@ class InstagramProfile(models.Model):
 
     def __unicode__(self):
         return unicode(self.user)
+
 
 class TwitterProfile(models.Model):
     user = models.ForeignKey(User)
@@ -73,6 +109,7 @@ class TwitterProfile(models.Model):
     def __unicode__(self):
         return unicode(self.user)
 
+
 class LinkedinProfile(models.Model):
     user = models.ForeignKey(User)
     linkedin_user = models.CharField(max_length=200)
@@ -80,6 +117,7 @@ class LinkedinProfile(models.Model):
 
     def __unicode__(self):
         return unicode(self.user)
+
 
 class Snippet(models.Model):
     created = models.DateTimeField(auto_now_add=True)
@@ -90,12 +128,14 @@ class Snippet(models.Model):
     class Meta:
         ordering = ('created',)
 
+
 class MeetupToken(models.Model):
     # user = models.ForeignKey(User)
     access_token = models.CharField(max_length=200)
 
     def __unicode__(self):
         return unicode(self.access_token)
+
 
 class FacebookProfile(models.Model):
     user = models.ForeignKey(User)
@@ -104,12 +144,14 @@ class FacebookProfile(models.Model):
     profile_url = models.CharField(max_length=50)
     access_token = models.CharField(max_length=100)
 
+
 class GoogleProfile(models.Model):
     user = models.ForeignKey(User)
     google_user_id = models.CharField(max_length=100)
     time_created = models.DateTimeField(auto_now_add=True)
     access_token = models.CharField(max_length=100)
     profile_url = models.CharField(max_length=100)
+
 
 class DropboxProfile(models.Model):
     user = models.ForeignKey(User)
