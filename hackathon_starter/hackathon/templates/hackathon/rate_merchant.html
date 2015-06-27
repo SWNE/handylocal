@@ -6,52 +6,39 @@
 
 	<div class="col-lg-12">
         <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped tablesorter">
-                <thead>
-                <tr>
-                <th class="header"> Name <i class="icon-sort"></i></th>
-                <th class="header"> Location <i class="icon-sort"></i></th>
-                <th class="header"> Talent <i class="icon-sort"></i></th>
-                <th class="header"> Rating <i class="icon-sort"></i></th>
-                </tr>
-            </thead>
-            <tbody>
 
-                    <td>{{ merchant.username }}</td>
-                    <td>{{ merchant.place}}</td>
-                    <td>{{ merchant.talent.name}}</td>
-                    <td>{{ merchant.rating}}</td>
-            </tbody>
-            </table>
-            <table class="table table-bordered table-hover table-striped tablesorter">
-                <thead>
+            <h2>Rate the Merchant: {{ merchant.business_name }}</h2>
+            <form class="form-horizontal" id="rating_form" method="post" action="{% url 'rate_merchant' merchant.id %}"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {% load bootstrap %}
 
-                <tr>
-                <th class="header"> Rating <i class="icon-sort"></i></th>
-                </tr>
-            </thead>
-            <tbody>
-            {% for item in ratings %}
-                <tr>
-                    <td>{{ item.calculate_average}}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-            <h2>'Rate the Merchant'</h2>
-            <form action = " {% url 'rate_merchant' merchant.id %}" method = "post">
-            {% csrf_token %}
-            <input type="radio" name="sex" value="male" checked>Male
-            <br>
-            <input type="radio" name="sex" value="female">Female
-            <br>
-            <input type="radio" name="sex" value="male" checked>Male
-            <br>
-            <input type="radio" name="sex" value="female">Female
-            <br>
-            <input type="radio" name="sex" value="male" checked>Male
-            <br>
-            <input type="submit" value="Vote" />
-            </form>
+                <table>
+                  <tr>
+                      <td class="container text-center">{{ rating_form.rating_ontime | bootstrap_horizontal}}</td>
+                  </tr>
+
+                  <tr>
+
+                      <td class="container text-center">{{ rating_form.rating_quality | bootstrap_horizontal}}</td>
+                  </tr>
+
+                  <tr>
+
+                      <td class="container text-center">{{ rating_form.rating_value | bootstrap_horizontal}}</td>
+                  </tr>
+
+                  <tr>
+                      <td class="container text-center">{{ rating_form.rating_reliability | bootstrap_horizontal}}</td>
+                  <tr>
+
+                      <td class="container text-center">{{ rating_form.text | bootstrap_horizontal}}</td>
+                  </tr>
+                  </tr>
+                </table>
+                <button class="btn btn-lg btn-primary" type="submit">Rate</button>
+                <input type="hidden" name="submit" value="Rate" />
+              </form>
             </table>
         </div>
     </div>

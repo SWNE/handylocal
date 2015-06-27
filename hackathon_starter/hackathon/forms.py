@@ -21,6 +21,10 @@ class MerchantForm(forms.ModelForm):
 
 
 class RatingForm(forms.ModelForm):
+    rating_ontime = forms.ChoiceField(choices=[(x, x) for x in range(1, 6)])
+    rating_value = forms.ChoiceField(choices=[(x, x) for x in range(1, 6)])
+    rating_reliability = forms.ChoiceField(choices=[(x, x) for x in range(1, 6)])
+    rating_quality = forms.ChoiceField(choices=[(x, x) for x in range(1, 6)])
     class Meta:
         model = MerchantRating
         fields = ("rating_ontime", "rating_value", "rating_reliability", "rating_quality", "text")

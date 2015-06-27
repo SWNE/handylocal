@@ -40,11 +40,12 @@ from rest_framework.parsers import JSONParser
 
 # Models
 
-from hackathon.models import Snippet, Profile, User, Merchant, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, \
+from hackathon.models import Snippet, Profile, User, Merchant, InstagramProfile, TwitterProfile, MeetupToken, \
+    GithubProfile, \
     LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile, MerchantRating
 
 from hackathon.serializers import SnippetSerializer
-from hackathon.forms import UserForm, MerchantForm
+from hackathon.forms import UserForm, MerchantForm, RatingForm
 from django.shortcuts import get_object_or_404, render
 
 
@@ -358,17 +359,50 @@ def merchant(request, merchant_id):
 ###################
 
 def rate_merchant(request, merchant_id):
+    if request.method == 'POST':
+        rating_form = RatingForm(data=request.POST)
+        if rating_form.is_valid():
+            # rating_form.user = get_object_or_404(User, pk=request.user.id)
+            # rating_form.merchant = get_object_or_404(Merchant, pk=merchant_id)
+            merchant = get_object_or_404(Merchant, pk=merchant_id)
+            rating = MerchantRating(user=get_object_or_404(User, pk=request.user.id), merchant=merchant)
+            rating.rating_ontime = request.POST['rating_quality']
+            rating.rating_quality = request.POST['rating_quality']
+            rating.rating_reliability = request.POST['rating_ontime']
+            rating.rating_value = request.POST['rating_quality']
+            rating.save()
+            ratings = MerchantRating.objects.all().filter(merchant=merchant)
+            context = {"merchant": rating.merchant, "ratings": ratings}
+            return render(request, 'hackathon/merchant.html', context)
+        else:
+            print rating_form.errors
+    else:
+        rating_form = RatingForm()
+
     merchant = get_object_or_404(Merchant, pk=merchant_id)
-    user = get_object_or_404(User, pk=request.user.id)
-    rating = MerchantRating(merchant=merchant, user=user)
-    context = {"rating": rating}
-    rating.save()
-    return render(request, 'hackathon/rate_merchant.html', context)
+    return render(request,
+                  'hackathon/rate_merchant.html',
+                  {'rating_form': rating_form, 'merchant': merchant})
+
+    # if request.method == 'POST':
+    # rating = request.POST.get('rating')
+    # rating.save()
+    #     ratings = MerchantRating.objects.all().filter(merchant=merchant)
+    #     context = {"merchant": rating.merchant, "ratings": ratings}
+    #     return render(request, 'hackathon/merchant.html', context)
+    # else:
+    #     merchant = get_object_or_404(Merchant, pk=merchant_id)
+    #     print request.user.id
+    #     user = get_object_or_404(User, pk=request.user.id)
+    #     rating = MerchantRating(merchant=merchant, user=user)
+    #     context = {"rating": rating, "merchant": merchant}
+
+    # return render(request, 'hackathon/rate_merchant.html', context)
 
 
 def post_rate_merchant(request, rating):
     # Save
-    #Update Merchant Average Rating
+    # Update Merchant Average Rating
     return render(request, 'hackathon/merchant.html', context)
 
 
@@ -443,7 +477,7 @@ def dropboxSearchFile(request):
 
 
 #######################
-#    FOURSQUARE API   #
+# FOURSQUARE API   #
 #######################
 
 def foursquare(request):
@@ -452,7 +486,7 @@ def foursquare(request):
 
 
 #################
-#    YELP API   #
+# YELP API   #
 #################
 
 def yelp(request):
@@ -464,7 +498,7 @@ def yelp(request):
 
 
 #################
-#   MEETUP API  #
+# MEETUP API  #
 #################
 
 def meetup(request):
