@@ -41,7 +41,7 @@ from rest_framework.parsers import JSONParser
 # Models
 from hackathon.models import Snippet, Profile, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile
 from hackathon.serializers import SnippetSerializer
-from hackathon.forms import UserForm
+from hackathon.forms import UserForm, MerchantForm
 
 
 profile_track = None
@@ -312,6 +312,11 @@ def index(request):
 
     context = {'hello': 'world'}
     return render(request, 'hackathon/index.html', context)
+
+
+###################
+# SEARCH
+###################
 
 
 ##################
@@ -763,6 +768,25 @@ def register(request):
     return render(request,
             'hackathon/register.html',
             {'user_form': user_form, 'registered': registered} )
+
+def register_merchant(request):
+    registered = False
+    if request.method == 'POST':
+        user_form = MerchantForm(data=request.POST)
+        if user_form.is_valid():
+            user = user_form.save()
+            user.set_password(user.password)
+            user.save()
+            registered = True
+        else:
+            print user_form.errors
+    else:
+        user_form = MerchantForm()
+
+
+    return render(request,
+            'hackathon/register_merchant.html',
+            {'merchant_form': user_form, 'registered': registered} )
 
 def user_login(request):
     if request.method == 'POST':

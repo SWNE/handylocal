@@ -14,10 +14,21 @@ class UserProfile(models.Model):
     def __unicode__(self):
         return self.user.username
 
-class merchant(User):
+class Merchant(OrigUser):
+    area = models.CharField(max_length=140, default='Johannesburg')
+    phone_number = models.CharField(max_length=140, default='000-000-0000')
     talent =  models.CharField(max_length=140, default='')
     rating =  models.CharField(max_length=2, default='0')
     business_name = models.CharField(max_length=140, default='')
+
+
+class MerchantProfile(models.Model):
+    # This line is required. Links UserProfile to a User model instance.
+    merchant = models.OneToOneField(Merchant)
+    
+    # Override the __unicode__() method to return out something meaningful!
+    def __unicode__(self):
+        return self.merchant.username
 
 class Profile(models.Model):
     user = models.ForeignKey(User)
