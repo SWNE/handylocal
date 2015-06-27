@@ -32,8 +32,8 @@ class Neighbourhood(models.Model):
         return self.name
 
 
-class Merchant(models.Model):
-    area = models.CharField(max_length=140, default='Johannesburg')
+class Merchant(OrigUser):
+    place = models.ForeignKey(Neighbourhood)
     phone_number = models.CharField(max_length=140, default='000-000-0000')
     talent = models.CharField(max_length=140, default='')
     rating = models.IntegerField(default='-1')
