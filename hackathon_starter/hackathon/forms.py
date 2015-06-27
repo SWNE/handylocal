@@ -17,4 +17,4 @@ class MerchantForm(forms.ModelForm):
 
     class Meta:
         model = Merchant
-        fields = ('username', 'area', 'phone_number', 'email', 'password')
+        fields = ('username', 'place', 'phone_number', 'email', 'password')

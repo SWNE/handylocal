@@ -39,7 +39,8 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
 # Models
-from hackathon.models import Snippet, Profile, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile
+from hackathon.models import Snippet, Profile, Merchant, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, \
+    LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile
 from hackathon.serializers import SnippetSerializer
 from hackathon.forms import UserForm, MerchantForm
 
@@ -47,13 +48,15 @@ from hackathon.forms import UserForm, MerchantForm
 profile_track = None
 getTumblr = TumblrOauthClient(settings.TUMBLR_CONSUMER_KEY, settings.TUMBLR_CONSUMER_SECRET)
 getInstagram = InstagramOauthClient(settings.INSTAGRAM_CLIENT_ID, settings.INSTAGRAM_CLIENT_SECRET)
-getTwitter = TwitterOauthClient(settings.TWITTER_CONSUMER_KEY, settings.TWITTER_CONSUMER_SECRET, settings.TWITTER_ACCESS_TOKEN, settings.TWITTER_ACCESS_TOKEN_SECRET)
+getTwitter = TwitterOauthClient(settings.TWITTER_CONSUMER_KEY, settings.TWITTER_CONSUMER_SECRET,
+                                settings.TWITTER_ACCESS_TOKEN, settings.TWITTER_ACCESS_TOKEN_SECRET)
 getGithub = GithubOauthClient('2a11ce63ea7952d21f02', '7e20f82a34698fb33fc837186e96b12aaca2618d')
 getLinkedIn = LinkedinOauthClient(settings.LINKEDIN_CLIENT_ID, settings.LINKEDIN_CLIENT_SECRET)
 getFacebook = FacebookOauthClient(settings.FACEBOOK_APP_ID, settings.FACEBOOK_APP_SECRET)
 getGoogle = GooglePlus(settings.GOOGLE_PLUS_APP_ID, settings.GOOGLE_PLUS_APP_SECRET)
 getDropbox = DropboxOauthClient(settings.DROPBOX_APP_ID, settings.DROPBOX_APP_SECRET)
 getFoursquare = FoursquareOauthClient(settings.FOURSQUARE_APP_ID, settings.FOURSQUARE_APP_SECRET)
+
 
 def index(request):
     print "index: " + str(request.user)
@@ -66,48 +69,52 @@ def index(request):
                 getGithub.getUserInfo()
                 print getGithub.access_token
                 try:
-                    user = User.objects.get(username = getGithub.username + '_github')
+                    user = User.objects.get(username=getGithub.username + '_github')
                 except User.DoesNotExist:
                     username = getGithub.username + '_github'
-                    new_user = User.objects.create_user(username, username+'@madewithgithub.com', 'password')
+                    new_user = User.objects.create_user(username, username + '@madewithgithub.com', 'password')
                     new_user.save()
                     try:
-                        profile = GithubProfile.objects.get(user = new_user.id)
+                        profile = GithubProfile.objects.get(user=new_user.id)
                         profile.access_token = getGithub.access_token
                     except GithubProfile.DoesNotExist:
-                        profile = GithubProfile(user=new_user, access_token=getGithub.access_token, scopes=getGithub.scopes ,github_user=getGithub.username)
+                        profile = GithubProfile(user=new_user, access_token=getGithub.access_token,
+                                                scopes=getGithub.scopes, github_user=getGithub.username)
                     profile.save()
-                    #profile = GithubProfile(user=new_user, access_token=getGithub.access_token, scopes=getGithub.scopes ,github_user=getGithub.username)
+                    # profile = GithubProfile(user=new_user, access_token=getGithub.access_token, scopes=getGithub.scopes ,github_user=getGithub.username)
                     #profile.save()
-                user = authenticate(username=getGithub.username+'_github', password='password')
+                user = authenticate(username=getGithub.username + '_github', password='password')
                 login(request, user)
             elif profile_track == 'twitter':
                 oauth_verifier = request.GET['oauth_verifier']
                 getTwitter.get_access_token_url(oauth_verifier)
 
                 try:
-                    user = User.objects.get(username = getTwitter.username + '_twitter')#(username=getTwitter.username)
+                    user = User.objects.get(username=getTwitter.username + '_twitter')  # (username=getTwitter.username)
                 except User.DoesNotExist:
                     username = getTwitter.username + '_twitter'
-                    new_user = User.objects.create_user(username, username+'@madewithtwitter.com', 'password')
+                    new_user = User.objects.create_user(username, username + '@madewithtwitter.com', 'password')
                     new_user.save()
-                    profile = TwitterProfile(user = new_user,oauth_token = getTwitter.oauth_token, oauth_token_secret= getTwitter.oauth_token_secret, twitter_user=getTwitter.username)
+                    profile = TwitterProfile(user=new_user, oauth_token=getTwitter.oauth_token,
+                                             oauth_token_secret=getTwitter.oauth_token_secret,
+                                             twitter_user=getTwitter.username)
                     profile.save()
-                user = authenticate(username=getTwitter.username+'_twitter', password='password')
+                user = authenticate(username=getTwitter.username + '_twitter', password='password')
                 login(request, user)
             elif profile_track == 'instagram':
                 code = request.GET['code']
                 getInstagram.get_access_token(code)
 
                 try:
-                    user = User.objects.get(username=getInstagram.user_data['username']+'_instagram')
+                    user = User.objects.get(username=getInstagram.user_data['username'] + '_instagram')
                 except User.DoesNotExist:
-                    username = getInstagram.user_data['username']+'_instagram'
-                    new_user = User.objects.create_user(username, username+'@madewithinstagram.com', 'password')
+                    username = getInstagram.user_data['username'] + '_instagram'
+                    new_user = User.objects.create_user(username, username + '@madewithinstagram.com', 'password')
                     new_user.save()
-                    profile = InstagramProfile(user = new_user, access_token = getInstagram.access_token, instagram_user=getInstagram.user_data['username'])
+                    profile = InstagramProfile(user=new_user, access_token=getInstagram.access_token,
+                                               instagram_user=getInstagram.user_data['username'])
                     profile.save()
-                user = authenticate(username=getInstagram.user_data['username']+'_instagram' , password='password')
+                user = authenticate(username=getInstagram.user_data['username'] + '_instagram', password='password')
                 login(request, user)
             elif profile_track == 'linkedin':
                 code = request.GET['code']
@@ -115,18 +122,19 @@ def index(request):
                 getLinkedIn.getUserInfo()
 
                 try:
-                    user = User.objects.get(username=getLinkedIn.user_id+'_linkedin')
+                    user = User.objects.get(username=getLinkedIn.user_id + '_linkedin')
                 except User.DoesNotExist:
-                    username = getLinkedIn.user_id+'_linkedin'
-                    new_user = User.objects.create_user(username, username+'@madwithlinkedin.com', 'password')
+                    username = getLinkedIn.user_id + '_linkedin'
+                    new_user = User.objects.create_user(username, username + '@madwithlinkedin.com', 'password')
                     new_user.save()
                     try:
-                        profile =LinkedinProfile.objects.get(user = new_user.id)
+                        profile = LinkedinProfile.objects.get(user=new_user.id)
                         profile.access_token = LinkedinProfile.access_token
                     except LinkedinProfile.DoesNotExist:
-                        profile = LinkedinProfile(user=new_user, access_token=getLinkedIn.access_token, linkedin_user=getLinkedIn.user_id)
+                        profile = LinkedinProfile(user=new_user, access_token=getLinkedIn.access_token,
+                                                  linkedin_user=getLinkedIn.user_id)
                     profile.save()
-                user = authenticate(username=getLinkedIn.user_id+'_linkedin', password='password')
+                user = authenticate(username=getLinkedIn.user_id + '_linkedin', password='password')
                 login(request, user)
 
             elif profile_track == 'facebook':
@@ -136,9 +144,10 @@ def index(request):
                 username = userInfo['first_name'] + userInfo['last_name']
 
                 try:
-                    user = User.objects.get(username=username+'_facebook')
+                    user = User.objects.get(username=username + '_facebook')
                 except User.DoesNotExist:
-                    new_user = User.objects.create_user(username+'_facebook', username+'@madewithfacbook', 'password')
+                    new_user = User.objects.create_user(username + '_facebook', username + '@madewithfacbook',
+                                                        'password')
                     new_user.save()
 
                     try:
@@ -151,7 +160,7 @@ def index(request):
                         profile.profile_url = userInfo['link']
                         profile.access_token = getFacebook.access_token
                     profile.save()
-                user = authenticate(username=username+'_facebook', password='password')
+                user = authenticate(username=username + '_facebook', password='password')
                 login(request, user)
             elif profile_track == 'tumblr':
                 if not getTumblr.is_authorized:
@@ -159,19 +168,21 @@ def index(request):
                     getTumblr.access_token_url(oauth_verifier)
                     getTumblr.getUserInfo()
                     try:
-                        user = User.objects.get(username = getTumblr.username + '_tumblr')
+                        user = User.objects.get(username=getTumblr.username + '_tumblr')
                     except User.DoesNotExist:
                         username = getTumblr.username + '_tumblr'
-                        new_user = User.objects.create_user(username, username+'@madewithtumblr.com', 'password')
+                        new_user = User.objects.create_user(username, username + '@madewithtumblr.com', 'password')
                         new_user.save()
                         try:
-                            profile =TumblrProfile.objects.get(user = new_user.id)
+                            profile = TumblrProfile.objects.get(user=new_user.id)
                             profile.access_token = getTumblr.access_token['oauth_token']
                             profile.access_token_secret = getTumblr.access_token['oauth_token_secret']
                         except TumblrProfile.DoesNotExist:
-                            profile = TumblrProfile(user=new_user, access_token=getTumblr.access_token['oauth_token'], access_token_secret= getTumblr.access_token['oauth_token_secret'], tumblr_user=getTumblr.username)
+                            profile = TumblrProfile(user=new_user, access_token=getTumblr.access_token['oauth_token'],
+                                                    access_token_secret=getTumblr.access_token['oauth_token_secret'],
+                                                    tumblr_user=getTumblr.username)
                         profile.save()
-                user = authenticate(username=getTumblr.username+'_tumblr', password='password')
+                user = authenticate(username=getTumblr.username + '_tumblr', password='password')
                 login(request, user)
 
 
@@ -183,13 +194,14 @@ def index(request):
                 username = userInfo['given_name'] + userInfo['family_name']
 
                 try:
-                    user = User.objects.get(username=username+'_google')
+                    user = User.objects.get(username=username + '_google')
                 except User.DoesNotExist:
-                    new_user = User.objects.create_user(username+'_google', username+'@madewithgoogleplus', 'password')
+                    new_user = User.objects.create_user(username + '_google', username + '@madewithgoogleplus',
+                                                        'password')
                     new_user.save()
 
                     try:
-                        profle = GoogleProfile.objects.get(user = new_user.id)
+                        profle = GoogleProfile.objects.get(user=new_user.id)
                         profile.access_token = getGoogle.access_token
                     except:
                         profile = GoogleProfile()
@@ -198,7 +210,7 @@ def index(request):
                         profile.access_token = getGoogle.access_token
                         profile.profile_url = userInfo['link']
                     profile.save()
-                user = authenticate(username=username+'_google', password='password')
+                user = authenticate(username=username + '_google', password='password')
                 login(request, user)
 
             elif profile_track == 'dropbox':
@@ -209,9 +221,10 @@ def index(request):
                 username = userInfo['name_details']['given_name'] + userInfo['name_details']['surname']
 
                 try:
-                    user = User.objects.get(username=username+'_dropbox')
+                    user = User.objects.get(username=username + '_dropbox')
                 except User.DoesNotExist:
-                    new_user = User.objects.create_user(username+'_dropbox', username+'@madewithdropbox', 'password')
+                    new_user = User.objects.create_user(username + '_dropbox', username + '@madewithdropbox',
+                                                        'password')
                     new_user.save()
 
                     try:
@@ -223,7 +236,7 @@ def index(request):
                         profile.access_token = getDropbox.access_token
                         profile.dropbox_user_id = userInfo['uid']
                     profile.save()
-                user = authenticate(username=username+'_dropbox', password='password')
+                user = authenticate(username=username + '_dropbox', password='password')
                 login(request, user)
 
             elif profile_track == 'foursquare':
@@ -233,9 +246,10 @@ def index(request):
                 username = userInfo['firstName'] + userInfo['lastName']
 
                 try:
-                    user = User.objects.get(username=username+'_foursquare')
+                    user = User.objects.get(username=username + '_foursquare')
                 except User.DoesNotExist:
-                    new_user = User.objects.create_user(username+'_foursquare', username+'@madewithfoursquare', 'password')
+                    new_user = User.objects.create_user(username + '_foursquare', username + '@madewithfoursquare',
+                                                        'password')
                     new_user.save()
 
                     try:
@@ -249,7 +263,7 @@ def index(request):
                         profile.access_token = getFoursquare.access_token
                     profile.save()
 
-                user = authenticate(username=username+'_foursquare', password='password')
+                user = authenticate(username=username + '_foursquare', password='password')
                 login(request, user)
 
 
@@ -258,7 +272,7 @@ def index(request):
 
     else:
         if request.GET.items():
-            user = User.objects.get(username = request.user.username)
+            user = User.objects.get(username=request.user.username)
             if profile_track == 'github':
                 code = request.GET['code']
                 getGithub.get_access_token(code)
@@ -267,25 +281,29 @@ def index(request):
                 try:
                     githubUser = GithubProfile.objects.get(user=user.id)
                 except GithubProfile.DoesNotExist:
-                    profile = GithubProfile(user=new_user, access_token=getGithub.access_token, scopes=getGithub.scopes ,github_user=getGithub.username)
+                    profile = GithubProfile(user=new_user, access_token=getGithub.access_token, scopes=getGithub.scopes,
+                                            github_user=getGithub.username)
                     profile.save()
             elif profile_track == 'twitter':
                 oauth_verifier = request.GET['oauth_verifier']
                 getTwitter.get_access_token_url(oauth_verifier)
 
                 try:
-                    twitterUser = TwitterProfile.objects.get(user = user.id)
+                    twitterUser = TwitterProfile.objects.get(user=user.id)
                 except TwitterProfile.DoesNotExist:
-                    profile = TwitterProfile(user = user, oauth_token = getTwitter.oauth_token, oauth_token_secret= getTwitter.oauth_token_secret, twitter_user=getTwitter.username)
+                    profile = TwitterProfile(user=user, oauth_token=getTwitter.oauth_token,
+                                             oauth_token_secret=getTwitter.oauth_token_secret,
+                                             twitter_user=getTwitter.username)
                     profile.save()
             elif profile_track == 'instagram':
                 code = request.GET['code']
                 getInstagram.get_access_token(code)
 
                 try:
-                    instagramUser = InstagramProfile.objects.get(user= user.id)
+                    instagramUser = InstagramProfile.objects.get(user=user.id)
                 except InstagramProfile.DoesNotExist:
-                    profile = InstagramProfile(user = user, access_token = getInstagram.access_token, instagram_user=getInstagram.user_data['username'])
+                    profile = InstagramProfile(user=user, access_token=getInstagram.access_token,
+                                               instagram_user=getInstagram.user_data['username'])
                     profile.save()
             elif profile_track == 'linkedin':
                 code = request.GET['code']
@@ -295,7 +313,8 @@ def index(request):
                 try:
                     linkedinUser = LinkedinProfile.objects.get(user=user.id)
                 except LinkedinProfile.DoesNotExist:
-                    profile = LinkedinProfile(user = user, access_token = getLinkedIn.access_token, linkedin_user=getLinkedIn.user_id)
+                    profile = LinkedinProfile(user=user, access_token=getLinkedIn.access_token,
+                                              linkedin_user=getLinkedIn.user_id)
                     profile.save()
             elif profile_track == 'tumblr':
                 if not getTumblr.is_authorized:
@@ -306,9 +325,10 @@ def index(request):
                     try:
                         tumblrUser = TumblrProfile.objects.get(user=user.id)
                     except TumblrProfile.DoesNotExist:
-                        profile = TumblrProfile(user=user, access_token=getTumblr.access_token['oauth_token'], access_token_secret= getTumblr.access_token['oauth_token_secret'], tumblr_user=getTumblr.username)
+                        profile = TumblrProfile(user=user, access_token=getTumblr.access_token['oauth_token'],
+                                                access_token_secret=getTumblr.access_token['oauth_token_secret'],
+                                                tumblr_user=getTumblr.username)
                         profile.save()
-
 
     context = {'hello': 'world'}
     return render(request, 'hackathon/index.html', context)
@@ -320,12 +340,13 @@ def index(request):
 
 
 ##################
-#  API Examples  #
+# API Examples  #
 ##################
 
 def api_examples(request):
     context = {'title': 'API Examples Page'}
     return render(request, 'hackathon/api_examples.html', context)
+
 
 #################
 #   STEAM API   #
@@ -337,11 +358,13 @@ def steam(request):
     SteamUN = "Marorin"
     steamID = steamidpulling(SteamUN, key)
     game = gamespulling(steamID, key)
-    return render(request,'hackathon/steam.html', {"game": game })
+    return render(request, 'hackathon/steam.html', {"game": game})
+
 
 def steamDiscountedGames(request):
     data = steamDiscounts()
-    return JsonResponse({ 'data': data })
+    return JsonResponse({'data': data})
+
 
 #################
 #  FACEBOOK API #
@@ -352,22 +375,24 @@ def facebook(request):
     This is an example of getting basic user info and display it
     '''
     userInfo = getFacebook.get_user_info()
-    return render(request, 'hackathon/facebookAPIExample.html', { 'userInfo' : userInfo})
+    return render(request, 'hackathon/facebookAPIExample.html', {'userInfo': userInfo})
+
 
 #################
 #  GOOGLE API   #
 #################
 def googlePlus(request):
-
     userInfo = getGoogle.get_user_info()
-    return render(request, 'hackathon/googlePlus.html', {'userInfo' : userInfo})
+    return render(request, 'hackathon/googlePlus.html', {'userInfo': userInfo})
+
 
 #################
 #  DROPBOX API  #
 #################
 def dropbox(request):
     userInfo = getDropbox.get_user_info()
-    return render(request, 'hackathon/dropbox.html', {'userInfo' : userInfo})
+    return render(request, 'hackathon/dropbox.html', {'userInfo': userInfo})
+
 
 def dropboxSearchFile(request):
     if request.method == 'POST':
@@ -378,17 +403,19 @@ def dropboxSearchFile(request):
                          'access_token': getDropbox.access_token}
         response = requests.post(SEARCH_FILE_URL, data=requestParams)
 
-        if response.status_code!=200:
-            raise(Exception('Invalid response, response code {c}'.format(c=response.status_code)))
+        if response.status_code != 200:
+            raise (Exception('Invalid response, response code {c}'.format(c=response.status_code)))
 
         return render(request, 'hackathon/dropboxSearchFile.html', {'data': response.json()})
+
+
 #######################
 #    FOURSQUARE API   #
 #######################
 
 def foursquare(request):
     userInfo = getFoursquare.get_user_info()
-    return render(request, 'hackathon/foursquare.html', {'data' : userInfo})
+    return render(request, 'hackathon/foursquare.html', {'data': userInfo})
 
 
 #################
@@ -400,7 +427,8 @@ def yelp(request):
     if request.method == 'POST':
         location = request.POST.get('location')
         data = requestData(location)
-    return render(request, 'hackathon/yelp.html', { 'data': data })
+    return render(request, 'hackathon/yelp.html', {'data': data})
+
 
 #################
 #   MEETUP API  #
@@ -411,23 +439,26 @@ def meetup(request):
     AUTHORIZE_URL = 'https://secure.meetup.com/oauth2/authorize?client_id=' + settings.MEETUP_CONSUMER_KEY + '&response_type=code' + '&redirect_uri=' + REDIRECT_URI
     return HttpResponseRedirect(AUTHORIZE_URL)
 
+
 def meetupToken(request):
     # print request.GET.get('code')
     access_token_url = 'https://secure.meetup.com/oauth2/access?'
     REDIRECT_URI = 'http://127.0.0.1:8000/hackathon/meetupToken'
-    url = access_token_url + 'client_id=' +  settings.MEETUP_CONSUMER_KEY + '&client_secret=' + settings.MEETUP_CONSUMER_SECRET + '&grant_type=authorization_code' + '&redirect_uri=' + REDIRECT_URI + '&code=' +  request.GET.get('code')
+    url = access_token_url + 'client_id=' + settings.MEETUP_CONSUMER_KEY + '&client_secret=' + settings.MEETUP_CONSUMER_SECRET + '&grant_type=authorization_code' + '&redirect_uri=' + REDIRECT_URI + '&code=' + request.GET.get(
+        'code')
 
     response = requests.post(url)
     access_token = json.loads(response.content)['access_token']
     # print access_token
     #if not MeetupToken.objects.all()[0]:
     if not MeetupToken.objects.all().exists():
-        meetupToken = MeetupToken(access_token = access_token)
+        meetupToken = MeetupToken(access_token=access_token)
         meetupToken.save()
     else:
-        meetupToken = MeetupToken(access_token = access_token)
+        meetupToken = MeetupToken(access_token=access_token)
         MeetupToken.objects.all()[0] = meetupToken
     return HttpResponseRedirect('http://127.0.0.1:8000/hackathon/meetupUser/')
+
 
 def meetupUser(request):
     if not MeetupToken.objects.all().exists():
@@ -436,7 +467,8 @@ def meetupUser(request):
     meetupData = {}
     userData = retrieveUserData('https://api.meetup.com/2/member/self/?access_token=' + str(access_token))
     meetupData['userData'] = userData
-    return render(request, 'hackathon/meetup.html', { 'data': meetupData })
+    return render(request, 'hackathon/meetup.html', {'data': meetupData})
+
 
 #################
 #   QUANDL API  #
@@ -448,40 +480,48 @@ def quandlDowJones(request):
     print dowjonesdata
     return JsonResponse({'data': dowjonesdata})
 
+
 def quandlSnp500(request):
     '''Returns JSON response about the latest SNP 500 index.'''
     snpdata = fetchData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/YAHOO/INDEX_GSPC.json?')
     return JsonResponse({'data': snpdata})
+
 
 def quandlNasdaq(request):
     '''Returns JSON response about the latest nasdaq index.'''
     nasdaqdata = fetchData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/NASDAQOMX/COMP.json?')
     return JsonResponse({'data': nasdaqdata})
 
+
 def quandlapple(request):
     '''Returns JSON response about the latest apple stock.'''
     appledata = fetchstockData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/GOOG/NASDAQ_AAPL.json')
     return JsonResponse({'data': appledata})
+
 
 def quandlNasdaqdiff(request):
     '''Returns JSON response about the latest nasdaq index.'''
     nasdaqdata = rdiffData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/NASDAQOMX/COMP.json?')
     return JsonResponse({'data': nasdaqdata})
 
+
 def quandlSnp500diff(request):
     '''Returns JSON response about the latest SNP 500 index.'''
     snpdata = rdiffData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/YAHOO/INDEX_GSPC.json?')
     return JsonResponse({'data': snpdata})
+
 
 def quandlDowJonesdiff(request):
     '''Returns JSON response about the latest dowjones index.'''
     dowjonesdata = rdiffData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/BCB/UDJIAD1.json?')
     return JsonResponse({'data': dowjonesdata})
 
+
 def quandlapplediff(request):
     '''Returns JSON response about the latest apple stock.'''
     appledata = rdiffData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/GOOG/NASDAQ_AAPL.json')
     return JsonResponse({'data': appledata})
+
 
 def quandlstocks(request):
     everyData = {}
@@ -490,13 +530,18 @@ def quandlstocks(request):
     everyData['dowdiff'] = rdiffData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/BCB/UDJIAD1.json?')
     snpdata = fetchData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/YAHOO/INDEX_GSPC.json?')
     everyData['snp'] = snpdata
-    everyData['snpdiff'] = rdiffData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/YAHOO/INDEX_GSPC.json?')
+    everyData['snpdiff'] = rdiffData(settings.QUANDLAPIKEY,
+                                     'https://www.quandl.com/api/v1/datasets/YAHOO/INDEX_GSPC.json?')
     nasdaqdata = fetchData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/NASDAQOMX/COMP.json?')
     everyData['nasdaq'] = nasdaqdata
-    everyData['nasdaqdiff'] = rdiffData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/NASDAQOMX/COMP.json?')
-    everyData['apple'] = fetchstockData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/GOOG/NASDAQ_AAPL.json')
-    everyData['applediff'] = rdiffData(settings.QUANDLAPIKEY, 'https://www.quandl.com/api/v1/datasets/GOOG/NASDAQ_AAPL.json')
-    return render(request, 'hackathon/quandl.html', { 'everyData': everyData })
+    everyData['nasdaqdiff'] = rdiffData(settings.QUANDLAPIKEY,
+                                        'https://www.quandl.com/api/v1/datasets/NASDAQOMX/COMP.json?')
+    everyData['apple'] = fetchstockData(settings.QUANDLAPIKEY,
+                                        'https://www.quandl.com/api/v1/datasets/GOOG/NASDAQ_AAPL.json')
+    everyData['applediff'] = rdiffData(settings.QUANDLAPIKEY,
+                                       'https://www.quandl.com/api/v1/datasets/GOOG/NASDAQ_AAPL.json')
+    return render(request, 'hackathon/quandl.html', {'everyData': everyData})
+
 
 #################
 #  NYTIMES API  #
@@ -504,21 +549,26 @@ def quandlstocks(request):
 
 def nytimespop(request):
     '''Returns JSON response about the most viewed articles for the last 24 hours.'''
-    popdata = fetcharticle(settings.POPAPIKEY, 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?')
+    popdata = fetcharticle(settings.POPAPIKEY,
+                           'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?')
     return JSONResponse({'data': popdata})
+
 
 def nytimestop(request):
     '''Returns JSON response about the articles located in the homepage'''
     topdata = fetcharticle(settings.TOPAPIKEY, 'http://api.nytimes.com/svc/topstories/v1/home.json?')
     return JSONResponse({'data': topdata})
 
+
 def nytimesarticles(request):
     everyData = {}
-    popdata = fetcharticle(settings.POPAPIKEY, 'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?')
+    popdata = fetcharticle(settings.POPAPIKEY,
+                           'http://api.nytimes.com/svc/mostpopular/v2/mostviewed/all-sections/1.json?')
     topdata = topdata = fetcharticle(settings.TOPAPIKEY, 'http://api.nytimes.com/svc/topstories/v1/home.json?')
     everyData['top'] = topdata
     everyData['pop'] = popdata
-    return render(request, 'hackathon/nytimes.html', { 'everyData': everyData })
+    return render(request, 'hackathon/nytimes.html', {'everyData': everyData})
+
 
 #################
 #   GITHUB API  #
@@ -533,6 +583,7 @@ def githubUser(request):
     return render(request, 'hackathon/github.html', {'data': parsedData})
     # return JsonResponse({ 'data': parsedData })
 
+
 def githubTopRepositories(request):
     '''Returns Top Commited Repositories for a specific Github User'''
 
@@ -540,12 +591,14 @@ def githubTopRepositories(request):
     if request.method == 'POST':
         user = request.POST.get('user')
         repositories = getUserRepositories(user, settings.GITHUB_CLIENT_ID, settings.GITHUB_CLIENT_SECRET)
-        list = getTopContributedRepositories(user, repositories, settings.GITHUB_CLIENT_ID, settings.GITHUB_CLIENT_SECRET)
+        list = getTopContributedRepositories(user, repositories, settings.GITHUB_CLIENT_ID,
+                                             settings.GITHUB_CLIENT_SECRET)
         filtered = filterCommits(list)
         parsedData['committed'] = filtered
         print parsedData
     return render(request, 'hackathon/githubTopRepositories.html', {'data': parsedData})
     # return JsonResponse({ 'data': parsedData })
+
 
 def githubResume(request):
     '''A sample application which pulls various Github data to form a Resume of sorts'''
@@ -553,7 +606,8 @@ def githubResume(request):
     allData = {}
     userData = getUserData('DrkSephy', settings.GITHUB_CLIENT_ID, settings.GITHUB_CLIENT_SECRET)
     repositories = getUserRepositories('DrkSephy', settings.GITHUB_CLIENT_ID, settings.GITHUB_CLIENT_SECRET)
-    list = getTopContributedRepositories('DrkSephy', repositories, settings.GITHUB_CLIENT_ID, settings.GITHUB_CLIENT_SECRET)
+    list = getTopContributedRepositories('DrkSephy', repositories, settings.GITHUB_CLIENT_ID,
+                                         settings.GITHUB_CLIENT_SECRET)
     filtered = filterCommits(list)
     stargazers = getStarGazerCount('DrkSephy', settings.GITHUB_CLIENT_ID, settings.GITHUB_CLIENT_SECRET)
     filteredStargazers = filterStarGazerCount(stargazers)
@@ -562,7 +616,7 @@ def githubResume(request):
     allData['filteredData'] = filtered
     allData['filteredStargazers'] = filteredStargazers
     allData['forkedRepos'] = forkedRepos
-    return render(request, 'hackathon/githubResume.html', { 'data': allData })
+    return render(request, 'hackathon/githubResume.html', {'data': allData})
 
 
 #################
@@ -579,7 +633,7 @@ def tumblr(request):
         #get blog information tagged with starbucks
         blogontag = getTumblr.getTaggedBlog("starbucks")
     else:
-        blog, tagged_blog, blogontag = '', '',''
+        blog, tagged_blog, blogontag = '', '', ''
         global profile_track
         profile_track = 'tumblr'
         tumblr_url = getTumblr.authorize_url()
@@ -600,32 +654,35 @@ def instagram(request):
         if request.method == 'GET':
             if request.GET.items():
                 instagram_tag = request.GET.get('instagram_tag')
-                instagramUser = InstagramProfile.objects.get(user = request.user)
+                instagramUser = InstagramProfile.objects.get(user=request.user)
                 tagged_media = getTaggedMedia(instagram_tag, instagramUser.access_token)
             else:
                 instagram_tag, tagged_media = '', ''
     else:
         global profile_track
         profile_track = 'instagram'
-        instagram_url =getInstagram.get_authorize_url()
+        instagram_url = getInstagram.get_authorize_url()
         return HttpResponseRedirect(instagram_url)
 
     context = {'title': 'Instagram', 'tagged_media': tagged_media, 'search_tag': instagram_tag}
     return render(request, 'hackathon/instagram.html', context)
+
 
 def instagramUser(request):
     ''' Returns JSON response about a specific Instagram User. '''
 
     access_token = InstagramProfile.objects.get(instagram_user='mk200789').access_token
     parsedData = getUserInfo(access_token)
-    return JsonResponse({ 'data': parsedData })
+    return JsonResponse({'data': parsedData})
+
 
 def instagramUserMedia(request):
     ''' Returns JSON response about a specific Instagram User's Media. '''
 
     access_token = InstagramProfile.objects.get(instagram_user='mk200789').access_token
     parsedData = getUserMedia(32833691, access_token)
-    return JsonResponse({'data': parsedData })
+    return JsonResponse({'data': parsedData})
+
 
 def instagramMediaByLocation(request):
     print request.user
@@ -646,12 +703,13 @@ def instagramMediaByLocation(request):
                         title = address
                         err_msg = ''
                 else:
-                    title, media, err_msg, location_ids, geocode_result = 'Media by location','', str(request.user)+ ' does not have an InstagramProfile','', ''
+                    title, media, err_msg, location_ids, geocode_result = 'Media by location', '', str(
+                        request.user) + ' does not have an InstagramProfile', '', ''
         else:
-            title, media, err_msg, location_ids, geocode_result = 'Media by location', '','', '', ''
+            title, media, err_msg, location_ids, geocode_result = 'Media by location', '', '', '', ''
 
-
-    context = {'title': title, 'geocode_result':geocode_result, 'media':media, 'list_id':location_ids, 'err_msg': err_msg}
+    context = {'title': title, 'geocode_result': geocode_result, 'media': media, 'list_id': location_ids,
+               'err_msg': err_msg}
     return render(request, 'hackathon/instagram_q.html', context)
 
 
@@ -668,8 +726,9 @@ def twitter(request):
         twitter_url = getTwitter.get_authorize_url()
         return HttpResponseRedirect(twitter_url)
 
-    context ={'title': 'twitter', 'value': value}
+    context = {'title': 'twitter', 'value': value}
     return render(request, 'hackathon/twitter.html', context)
+
 
 def twitterTweets(request):
     print getTwitter.is_authorized
@@ -687,7 +746,7 @@ def twitterTweets(request):
         twitter_url = getTwitter.get_authorize_url()
         return HttpResponseRedirect(twitter_url)
 
-    context ={'title': 'twitter tweet', 'content': content, 'data': jsonlist}
+    context = {'title': 'twitter tweet', 'content': content, 'data': jsonlist}
     return render(request, 'hackathon/twitter_tweet.html', context)
 
 
@@ -716,10 +775,12 @@ class JSONResponse(HttpResponse):
     """
     An HttpResponse that renders its content into JSON.
     """
+
     def __init__(self, data, **kwargs):
         content = JSONRenderer().render(data)
         kwargs['content_type'] = 'application/json'
         super(JSONResponse, self).__init__(content, **kwargs)
+
 
 @csrf_exempt
 def snippet_list(request):
@@ -764,10 +825,10 @@ def register(request):
     else:
         user_form = UserForm()
 
-
     return render(request,
-            'hackathon/register.html',
-            {'user_form': user_form, 'registered': registered} )
+                  'hackathon/register.html',
+                  {'user_form': user_form, 'registered': registered})
+
 
 def register_merchant(request):
     registered = False
@@ -783,10 +844,25 @@ def register_merchant(request):
     else:
         user_form = MerchantForm()
 
+    return render(request,
+                  'hackathon/register_merchant.html',
+                  {'merchant_form': user_form, 'registered': registered})
+
+
+def view_merchants(request):
+    result = Merchant.objects.all()
 
     return render(request,
-            'hackathon/register_merchant.html',
-            {'merchant_form': user_form, 'registered': registered} )
+                  'hackathon/view_merchants.html',
+                  {'merchants': result})
+
+
+def view_merchant(request):
+    result = Merchant.objects.all()
+
+    return render(request,
+                  'hackathon/view_merchant.html',
+                  {'merchants': result})
 
 def user_login(request):
     if request.method == 'POST':
@@ -808,6 +884,7 @@ def user_login(request):
     else:
         return render(request, 'hackathon/login.html', {})
 
+
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/hackathon/')
@@ -819,11 +896,13 @@ def instagram_login(request):
     instagram_url = getInstagram.get_authorize_url()
     return HttpResponseRedirect(instagram_url)
 
+
 def tumblr_login(request):
     global profile_track
     profile_track = 'tumblr'
     tumblr_url = getTumblr.authorize_url()
     return HttpResponseRedirect(tumblr_url)
+
 
 def twitter_login(request):
     global profile_track
@@ -831,17 +910,20 @@ def twitter_login(request):
     twitter_url = getTwitter.get_authorize_url()
     return HttpResponseRedirect(twitter_url)
 
+
 def github_login(request):
     global profile_track
     profile_track = 'github'
     github_url = getGithub.get_authorize_url()
     return HttpResponseRedirect(github_url)
 
+
 def linkedin_login(request):
     global profile_track
     profile_track = 'linkedin'
     linkedin_url = getLinkedIn.get_authorize_url()
     return HttpResponseRedirect(linkedin_url)
+
 
 def facebook_login(request):
     global profile_track
@@ -856,11 +938,13 @@ def google_login(request):
     google_url = getGoogle.get_authorize_url()
     return HttpResponseRedirect(google_url)
 
+
 def dropbox_login(request):
     global profile_track
     profile_track = 'dropbox'
     dropbox_url = getDropbox.get_authorize_url()
     return HttpResponseRedirect(dropbox_url)
+
 
 def foursquare_login(request):
     global profile_track
