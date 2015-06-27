@@ -29,7 +29,7 @@ class Neighbourhood(models.Model):
     name = models.CharField(max_length=140, default='Parktown')
     # Override the __unicode__() method to return out something meaningful!
     def __unicode__(self):
-        return self.name
+        return self.name + self.area.name
 
 
 class Merchant(OrigUser):
@@ -44,7 +44,7 @@ class Merchant(OrigUser):
     business_name = models.CharField(max_length=140, default='')
 
 
-class Ratings(models.Model):
+class MerchantRatings(models.Model):
     merchant = models.ForeignKey(Merchant)
     rating_ontime = models.IntegerField(default='-1')
     rating_value = models.IntegerField(default='-1')

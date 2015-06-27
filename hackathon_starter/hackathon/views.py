@@ -39,7 +39,7 @@ from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 
 # Models
-from hackathon.models import Snippet, Profile, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile
+from hackathon.models import Snippet, Merchant, MerchantRatings, Neighbourhood, Area, MerchantProfile, Profile, InstagramProfile, TwitterProfile, MeetupToken, GithubProfile, LinkedinProfile, FacebookProfile, TumblrProfile, GoogleProfile, DropboxProfile, FoursquareProfile
 from hackathon.serializers import SnippetSerializer
 from hackathon.forms import UserForm, MerchantForm
 
@@ -315,9 +315,12 @@ def index(request):
 
 
 ###################
-# SEARCH
+# DISPLAY MERCHANT
 ###################
-
+def merchants(request):
+    merchants = Merchant.objects.all()
+    context = {'merchants': merchants}
+    return render(request, 'hackathon/merchants.html', context)
 
 ##################
 #  API Examples  #
