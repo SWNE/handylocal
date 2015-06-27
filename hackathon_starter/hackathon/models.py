@@ -1,14 +1,23 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User as OrigUser
+
+class User(OrigUser):
+    area = models.CharField(max_length=140, default='Johannesburg')
+    phone_number = models.CharField(max_length=140, default='000-000-0000')
 
 # Create your models here.
 class UserProfile(models.Model):
     # This line is required. Links UserProfile to a User model instance.
     user = models.OneToOneField(User)
-
+    
     # Override the __unicode__() method to return out something meaningful!
     def __unicode__(self):
         return self.user.username
+
+class merchant(User):
+    talent =  models.CharField(max_length=140, default='')
+    rating =  models.CharField(max_length=2, default='0')
+    business_name = models.CharField(max_length=140, default='')
 
 class Profile(models.Model):
     user = models.ForeignKey(User)

@@ -101,8 +101,6 @@ NOSE_ARGS = [
     '--cover-package=hackathon/scripts',
 ]
 
-AUTH_PROFILE_MODULE = 'hackathon.UserProfile'
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 ############
