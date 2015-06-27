@@ -33,12 +33,16 @@ class Neighbourhood(models.Model):
 
 
 class Service(models.Model):
-    name = models.CharField(max_length=140, default='000-000-0000')
+    name = models.CharField(max_length=140, default='')
+    # Override the __unicode__() method to return out something meaningful!
+    def __unicode__(self):
+        return self.name
+
 
 class Merchant(OrigUser):
     place = models.ForeignKey(Neighbourhood)
     phone_number = models.CharField(max_length=140, default='000-000-0000')
-    talent = models.CharField(max_length=140, default='')
+    talent = models.ForeignKey(Service)
     rating = models.IntegerField(default='-1')
     rating_ontime = models.IntegerField(default='-1')
     rating_value = models.IntegerField(default='-1')
@@ -48,8 +52,6 @@ class Merchant(OrigUser):
 
     def calculate_average(self):
         return (self.rating_ontime + self.rating_quality + self.rating_reliability + self.rating_value) / 4.0
-
-
 
 
 class MerchantRating(models.Model):

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from hackathon.models import UserProfile, Profile, Merchant, MerchantProfile, Area, Neighbourhood, MerchantRating
+from hackathon.models import UserProfile, Profile, Merchant, MerchantProfile, Area, Neighbourhood, MerchantRating, Service
 
 # Register your models here.
 class TwitterProfileAdmin(admin.ModelAdmin):
@@ -13,3 +13,4 @@ admin.site.register(Merchant)
 admin.site.register(Area)
 admin.site.register(Neighbourhood)
 admin.site.register(MerchantRating)
+admin.site.register(Service)
