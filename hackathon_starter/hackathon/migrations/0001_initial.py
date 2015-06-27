@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
-import django.contrib.auth.models
 from django.conf import settings
+import django.contrib.auth.models
 
 
 class Migration(migrations.Migration):
@@ -13,6 +13,13 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
+        migrations.CreateModel(
+            name='Area',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('name', models.CharField(default=b'Johannesburg', max_length=140)),
+            ],
+        ),
         migrations.CreateModel(
             name='DropboxProfile',
             fields=[
@@ -86,21 +93,16 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Merchant',
             fields=[
-                ('user_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to=settings.AUTH_USER_MODEL)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('area', models.CharField(default=b'Johannesburg', max_length=140)),
                 ('phone_number', models.CharField(default=b'000-000-0000', max_length=140)),
                 ('talent', models.CharField(default=b'', max_length=140)),
-                ('rating', models.CharField(default=b'0', max_length=2)),
+                ('rating', models.IntegerField(default=b'-1')),
+                ('rating_ontime', models.IntegerField(default=b'-1')),
+                ('rating_value', models.IntegerField(default=b'-1')),
+                ('rating_reliability', models.IntegerField(default=b'-1')),
+                ('rating_quality', models.IntegerField(default=b'-1')),
                 ('business_name', models.CharField(default=b'', max_length=140)),
-            ],
-            options={
-                'abstract': False,
-                'verbose_name': 'user',
-                'verbose_name_plural': 'users',
-            },
-            bases=('auth.user',),
-            managers=[
-                ('objects', django.contrib.auth.models.UserManager()),
             ],
         ),
         migrations.CreateModel(
@@ -111,11 +113,30 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
+            name='Neighbourhood',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('name', models.CharField(default=b'Parktown', max_length=140)),
+                ('area', models.ForeignKey(to='hackathon.Area')),
+            ],
+        ),
+        migrations.CreateModel(
             name='Profile',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('oauth_token', models.CharField(max_length=200)),
                 ('oauth_secret', models.CharField(max_length=200)),
+            ],
+        ),
+        migrations.CreateModel(
+            name='Ratings',
+            fields=[
+                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
+                ('rating_ontime', models.IntegerField(default=b'-1')),
+                ('rating_value', models.IntegerField(default=b'-1')),
+                ('rating_reliability', models.IntegerField(default=b'-1')),
+                ('rating_quality', models.IntegerField(default=b'-1')),
+                ('merchant', models.ForeignKey(to='hackathon.Merchant')),
             ],
         ),
         migrations.CreateModel(
@@ -180,6 +201,11 @@ class Migration(migrations.Migration):
         ),
         migrations.AddField(
             model_name='tumblrprofile',
+            name='user',
+            field=models.ForeignKey(to='hackathon.User'),
+        ),
+        migrations.AddField(
+            model_name='ratings',
             name='user',
             field=models.ForeignKey(to='hackathon.User'),
         ),

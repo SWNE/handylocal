@@ -2,83 +2,239 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94ec51cb-10ff-4575-a392-1ab8ff15fbc1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/img/github.png" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/img/github.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/img/linkedin.jpg" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/img/linkedin.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/img/steam.png" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/img/steam.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/img/tumblr.png" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/img/tumblr.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.bowerrc" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.pylintrc" afterPath="$PROJECT_DIR$/.pylintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/.pylintrc" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/.pylintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/Makefile" afterPath="$PROJECT_DIR$/hackathon_starter/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/__init__.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/__init__.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/__init__.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon_starter/__init__.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon_starter/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/admin.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/api_examples.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/api_examples.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/base.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/conf.py" afterPath="$PROJECT_DIR$/hackathon_starter/conf.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/dropbox.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/dropbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/dropbox.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/dropbox.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/dropboxSearchFile.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/dropboxSearchFile.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/facebook.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/facebook.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/facebookAPIExample.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/facebookAPIExample.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/css/form.css" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/css/form.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/forms.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/foursquare.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/foursquare.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/foursquare.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/foursquare.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/github.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/github.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/github.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/github.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/githubResume.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/githubResume.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/githubTopRepositories.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/githubTopRepositories.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/googlePlus.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/googlePlus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/googlePlus.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/googlePlus.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/index.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/index.rst" afterPath="$PROJECT_DIR$/hackathon_starter/index.rst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/instagram.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/instagram.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/instagram.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/instagram.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/instagram_q.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/instagram_q.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/linkedin.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/linkedin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/linkedin.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/linkedin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/login.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/make.bat" afterPath="$PROJECT_DIR$/hackathon_starter/make.bat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/manage.py" afterPath="$PROJECT_DIR$/hackathon_starter/manage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/meetup.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/meetup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/meetup.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/meetup.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/0002_auto_20150627_0949.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/0003_area.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/0004_neighbourhoood.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/0005_auto_20150627_1004.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/0006_ratings.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/FontAwesome.otf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/db.sqlite3" afterPath="$PROJECT_DIR$/hackathon_starter/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.woff2" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/.bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/.bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/.bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/.bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/.csscomb.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/.csscomb.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/.csslintrc" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/.csslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/.editorconfig" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/.editorconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/.gitattributes" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/.gitignore" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/.gitignore" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/.jscsrc" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/.jscsrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/.jshintrc" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/.jshintrc" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/.npmignore" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/data/Data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/LICENSE" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/LICENSE" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/MIT-LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/README.md" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/README.md" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/README.md" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/effects/Tween.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/data/accepts.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/data/accepts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core/access.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/addGetHookIf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/affix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/event/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/alerts.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/alerts.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/alerts.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/alerts.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/event/alias.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/exports/amd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/animated.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/effects/animatedSelector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/attr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/background-variant.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/background-variant.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/badges.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/badges.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/bootstrap-social.css" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/bootstrap-social.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/bootstrap-social.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/bootstrap-social.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/bootstrap-social.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/bootstrap-social.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/bootstrap.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/border-radius.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/border-radius.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/bower.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/breadcrumbs.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/breadcrumbs.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/bs-commonjs-generator.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/bs-commonjs-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/bs-glyphicons-data-generator.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/bs-glyphicons-data-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/bs-lessdoc-parser.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/bs-lessdoc-parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/bs-raw-files-generator.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/bs-raw-files-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/button-groups.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/buttons.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/buttons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/buttons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/carousel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/carousel.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/center-block.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/center-block.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/classes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/clearfix.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/clearfix.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/close.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/close.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/code.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/code.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/collapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/component-animations.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/component-animations.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/configBridge.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/curCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/d3.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/d3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/d3.min.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/data.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/defaultDisplay.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/defaultDisplay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/deferred.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/queue/delay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/deprecated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/dropdowns.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/dropdowns.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/effects.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/event.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/traversing/findFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/css/font-awesome.css.map" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/css/font-awesome.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/forms.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/forms.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/forms.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/exports/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/glyphicons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/gradients.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/gradients.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/grid-framework.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/grid-framework.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/grid.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/grid.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/hide-text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/image.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/image.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/input-groups.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/intro.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/intro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/jsonp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/jumbotron.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/labels.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/labels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/labels.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/labels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/list-group.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/list-group.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/list-group.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/list-group.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/manipulation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/media.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/media.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/modals.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/models.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/navbar.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="$PROJECT_DIR$/npm-debug.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/nytimes.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/nytimes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/nytimes.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/nytimes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/quandl.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/quandl.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/quandl.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/quandl.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/register.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/register.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/register_merchant.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/register_merchant.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/scraper.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/scraper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/serializers.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/serializers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon_starter/settings.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon_starter/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/testcase.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/testcase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/testgithub.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/testgithub.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/testinstagram.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/testinstagram.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/tests.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/testtumblr.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/unittests/testtumblr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/tumblr.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/tumblr.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/tumblr.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/tumblr.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/twilio.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/twilio.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/twilioapi.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/twilioapi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/twitter.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/twitter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/twitter.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/twitter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/twitter_tweet.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/twitter_tweet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/urls.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon_starter/urls.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon_starter/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/views.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon_starter/wsgi.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon_starter/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/yelp.html" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/templates/hackathon/yelp.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/yelp.py" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/scripts/yelp.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/nav-divider.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/nav-divider.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/nav-vertical-align.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/nav-vertical-align.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/navbar.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/navbar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/navs.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/navs.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/normalize.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/normalize.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/offset.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/offset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/opacity.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/opacity.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/outro.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/outro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/package.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/package.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/d3/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/package.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/package.json" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap-social/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/pager.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/pager.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/pagination.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/pagination.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/pagination.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/panels.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/panels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/panels.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/panels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core/parseHTML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/parseJSON.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/parseJSON.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/parseXML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/popover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/popovers.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/popovers.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/print.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/print.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/progress-bar.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/progress-bar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/progress-bars.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/progress-bars.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/prop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/queue.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/queue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/core/ready.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/reset-filter.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/reset-filter.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/reset-text.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/reset-text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/resize.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/resize.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/responsive-embed.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/responsive-embed.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/responsive-utilities.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/responsive-utilities.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/responsive-visibility.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/responsive-visibility.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/grunt/sauce_browsers.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/scaffolding.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/selector-native.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/selector-sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/selector.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/serialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/size.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/size.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/event/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/manipulation/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/swap.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/css/swap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/tab-focus.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/tab-focus.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/table-row.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/table-row.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/tables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/text-emphasis.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/text-emphasis.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/text-overflow.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/text-overflow.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/theme.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/thumbnails.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/thumbnails.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/tooltip.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/tooltip.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/js/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/traversing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/type.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/utilities.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/utilities.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/attributes/val.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/font-awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/mixins/vendor-prefixes.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/wells.less" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/bootstrap/less/wells.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/wrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/hackathon_starter/hackathon/static/bower_components/jquery/src/ajax/xhr.js" />
     </list>
     <ignored path="django-hackathon-starter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,8 +261,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73295456" vertical-offset="0" max-vertical-offset="2595">
-              <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.33522728" vertical-offset="1715" max-vertical-offset="2595">
+              <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -114,10 +270,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="945">
+              <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="285">
+            <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="285">
               <caret line="1" column="97" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -129,7 +295,7 @@
       <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8" vertical-offset="0" max-vertical-offset="390">
+            <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="390">
               <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
               <folding>
                 <element signature="e#0#54#0" expanded="true" />
@@ -141,7 +307,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-258.0" vertical-offset="0" max-vertical-offset="12930">
+            <state vertical-scroll-proportion="0.0" vertical-offset="6450" max-vertical-offset="12930">
               <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
               <folding />
             </state>
@@ -158,6 +324,7 @@
       <list>
         <option value="$PROJECT_DIR$/hackathon_starter/hackathon/admin.py" />
         <option value="$PROJECT_DIR$/hackathon_starter/hackathon/forms.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/hackathon_starter/hackathon/models.py" />
       </list>
     </option>
@@ -247,8 +414,131 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="django-hackathon-starter" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="django-hackathon-starter" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="django-hackathon-starter" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="django-hackathon-starter" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="django-hackathon-starter" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="django-hackathon-starter" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -259,19 +549,19 @@
     <frame x="0" y="23" width="1680" height="1023" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24954791" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -298,9 +588,27 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="645" max-vertical-offset="2595">
+          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6" vertical-offset="0" max-vertical-offset="285">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="285">
           <caret line="1" column="97" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -310,7 +618,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8" vertical-offset="0" max-vertical-offset="390">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="390">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
           <folding>
             <element signature="e#0#54#0" expanded="true" />
@@ -320,16 +628,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-258.0" vertical-offset="0" max-vertical-offset="12930">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6450" max-vertical-offset="12930">
           <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="285">
+          <caret line="1" column="97" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="390">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6450" max-vertical-offset="12930">
+          <caret line="443" column="0" selection-start-line="443" selection-start-column="0" selection-end-line="443" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="945">
+          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hackathon_starter/hackathon/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73295456" vertical-offset="0" max-vertical-offset="2595">
-          <caret line="43" column="64" selection-start-line="43" selection-start-column="64" selection-end-line="43" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.33522728" vertical-offset="1715" max-vertical-offset="2595">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
