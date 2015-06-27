@@ -25,14 +25,26 @@
             <table class="table table-bordered table-hover table-striped tablesorter">
                 <thead>
                 <tr>
-                <th class="header"> Rating <i class="icon-sort"></i></th>
+                    <th class="header"># <i class="icon-sort"></i></th>
+                    <th class="header">Rater <i class="icon-sort"></i></th>
+                    <th class="header">Average Rating <i class="icon-sort"></i></th>
+                    <th class="header">Reliability <i class="icon-sort"></i></th>
+                    <th class="header">Quality <i class="icon-sort"></i></th>
+                    <th class="header">Value <i class="icon-sort"></i></th>
+                    <th class="header">On Time<i class="icon-sort"></i></th>
                 </tr>
             </thead>
             <tbody>
             <a href="{% url 'rate_merchant' merchant.id %}">Rate Merchant</a>
             {% for item in ratings %}
                 <tr>
+                    <td>{{ item.id}}</td>
+                    <td><b>{{ item.user.username}}</b></td>
                     <td>{{ item.calculate_average}}</td>
+                    <td>{{ item.rating_reliability}}</td>
+                    <td>{{ item.rating_quality}}</td>
+                    <td>{{ item.rating_value}}</td>
+                    <td>{{ item.rating_ontime}}</td>
                 </tr>
             {% endfor %}
 

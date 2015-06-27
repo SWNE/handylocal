@@ -11,7 +11,7 @@
           <div class='container text-center'>
               <h2 class="form-signin-heading">Sign Up</h2>
               <br>
-              <form class="form-horizontal" id="merchant_form" method="post" action="/hackathon/register/"
+              <form class="form-horizontal" id="merchant_form" method="post" action="/hackathon/register_merchant/"
                 enctype="multipart/form-data">
                 {% csrf_token %}
                 {% load bootstrap %} 
@@ -21,20 +21,33 @@
                       <td class="container text-center">{{ merchant_form.username | bootstrap_horizontal}}</td>
                   </tr>
 
+                    <tr>
+                      <td class="container text-center">{{ merchant_form.first_name | bootstrap_horizontal}}</td>
+                  </tr>
+
+                    <tr>
+                      <td class="container text-center">{{ merchant_form.last_name | bootstrap_horizontal}}</td>
+                  </tr>
                   <tr>
-                     
+
                       <td class="container text-center">{{ merchant_form.email | bootstrap_horizontal}}</td>
                   </tr>
 
                   <tr>
-                     
+
                       <td class="container text-center">{{ merchant_form.place | bootstrap_horizontal}}</td>
                   </tr>
+
+                    <tr>
+
+                      <td class="container text-center">{{ merchant_form.talent | bootstrap_horizontal}}</td>
+                  </tr>
+
 
                   <tr>
                       <td class="container text-center">{{ merchant_form.phone_number | bootstrap_horizontal}}</td>
                   <tr>
-                     
+
                       <td class="container text-center">{{ merchant_form.password | bootstrap_horizontal}}</td>
                   </tr>
                   </tr>
