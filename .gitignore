@@ -58,3 +58,7 @@ target/
 
 hackathon_starter/hackathon/
 hackathon_starter/hackathon/*
+
+
+.idea/
+.idea/*
