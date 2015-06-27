@@ -33,7 +33,7 @@ class Neighbourhood(models.Model):
 
 
 class Merchant(OrigUser):
-    area = models.CharField(max_length=140, default='Johannesburg')
+    place = models.ForeignKey(Neighbourhood)
     phone_number = models.CharField(max_length=140, default='000-000-0000')
     talent = models.CharField(max_length=140, default='')
     rating = models.IntegerField(default='-1')
