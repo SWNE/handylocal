@@ -23,25 +23,26 @@
 		}
 		
 		img#logo {
-			height:				52px;
+			height:				76px;
 			position:			relative;
-			margin-top:			-16px;
-			margin-left:		-16px;
 		}
 		
 		nav.navbar {
+			background-image:	none;
+			background:			transparent;
 			border-width:		0;
 		}
 		
 		.navbar-default .navbar-nav>li>a {
-			padding-top:		50px;
-			padding-bottom:		50px;
+			padding-top:		35px;
+			padding-bottom:		35px;
 			color:				#eee;
 			font-weight:		bold;
 			background-color:	rgba(0,0,0,0.2);
 		}
 		.navbar-default .navbar-nav>li>a:hover {
-			background-color:	rgba(0,0,0,0.25);
+			background-color:	rgba(0,0,0,0.7);
+			color:				white;
 		}
 		
 		.navbar-default .navbar-nav>.active>a {
@@ -53,11 +54,13 @@
 		}
 		
 		div.container-fluid {
-			background: url('/static/img/banner_sat.png') no-repeat; 
+			background-image:	none;
+			background-color:	rgba(31,31,31,0.3);
+			/*background: url('/static/img/banner_sat.png') no-repeat; 
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
-			background-size: cover;
+			background-size: cover;*/
 			padding-left:	-15px;
 			padding-right:	-15px;
 		}
@@ -66,8 +69,16 @@
 			padding:			1.5em;
 			margin-top:			2.5em;
 			font-size:			2rem;
-			color:				#444;
-			background-color:	rgba(255,255,255,0.4);
+			color:				#222;
+			background-color:	rgba(255,255,255,0.6);
+		}
+		
+		body{
+			background: url("/static/img/handyman.jpg") no-repeat; 
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
 		}
 	</style>
 </head>
@@ -84,7 +95,7 @@
 					<span class="icon-bar"></span>
 				</button>
 				<a class="navbar-brand" href="/hackathon">
-					<!--<img id='logo' src='assets/img/logo.png'/>-->
+					<img id='logo' src='/static/img/logo_new.png'/>
 				</a>
 			</div>
 
@@ -126,27 +137,29 @@
 					<h1>Please register/login</h1>
 					<br>
 				
-					<p><strong>Handi-Connect</strong> is a business registry that connects local 
+					<ul>
+					<li><p><strong>Handi-Connect</strong> is a business registry that connects local 
 						informal businesses providing good quality services to 
-						clients and customers.</p> 
+						clients and customers.</p> </li>
 					
-					<p>Are you a small business looking for clients within your 
+					<li><p>Are you a small business looking for clients within your 
 						neighbourhood that require your skills and services? 
 						<strong>Handi-Connect</strong> allows you to advertise your skills and 
-						services to clients.</p>
+						services to clients.</p></li>
 
-					<p>Are you looking for a free-lancer to do work but not sure
+					<li><p>Are you looking for a free-lancer to do work but not sure
 						who is the best person for the job?  <strong>Handi-Connect</strong> 
 						provides you with information of where good quality and 
-						affordable services are available within your area.</p> 
+						affordable services are available within your area.</p> </li>
 
-					<p>Do you want to give recognition to free-lancers who do 
+					<li><p>Do you want to give recognition to free-lancers who do 
 						great work? <strong>Handi-Connect</strong> is the platform just for that.
-					</p>
+					</p></li>
 
-					<p>Are you tired of substandard services provided? 
+						<li><p>Are you tired of substandard services provided? 
 						<strong>Handi-Connect</strong> is your answer.</p>
- 
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

@@ -24,9 +24,6 @@ body#search > .container > .margin-top.row {
     margin: 0px 0px 5px 0px;
 }
 
-body {
-    background:#c33;
-}
 
 .panel-transparent {
     background: none !important;
@@ -89,4 +86,16 @@ img.radio-label:hover {
 	max-height:		4em;
 	margin-top:		0;
 	margin-bottom:	0;
+}
+
+body{
+	background: url("/static/img/handyman.jpg") no-repeat; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}    
+
+div.container.main {
+	background-color:	rgba(230,230,230,0.4);
 }

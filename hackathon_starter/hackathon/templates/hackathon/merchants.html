@@ -39,7 +39,7 @@
                     <div class="panel-body">
                     {% for item in merchants %}
                         <div class="form-group text-center">
-                            <a href="{% url 'merchant' item.id%}"> {{ item.username }}</a>
+                            <a href="{% url 'merchant' item.id%}"><h2>{{ item.username }}</h2></a>
                 
                             <address class="resultAddress">
                                 <span class="glyphicon glyphicon-map-marker"></span>
