@@ -4,10 +4,12 @@
 	{% include 'hackathon/base.html' %}
 	<h1 class="text-center"> {{ title }}</h1> 
 
-	<div class="col-lg-12">
+	<div class="col-lg-8 col-lg-offset-2" style='background-color: rgba(255,255,255,0.5)'>
         <div class="table-responsive">
 
-            <h2>Rate the Merchant: {{ merchant.business_name }}</h2>
+            <h1>Rate the Merchant: {{ merchant.username }}</h1>
+            <br>
+            
             <form class="form-horizontal" id="rating_form" method="post" action="{% url 'rate_merchant' merchant.id %}"
                 enctype="multipart/form-data">
                 {% csrf_token %}
