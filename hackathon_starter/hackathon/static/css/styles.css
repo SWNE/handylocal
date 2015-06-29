@@ -16,7 +16,7 @@ body#search > .container > .margin-top.row {
 
 .panel-body 
 { 
-    max-height: 800px; width: 100%; margin: 0; overflow-y: auto; 
+    width: 100%; margin: 0; overflow-y: auto; 
     background: none;
 }
 
@@ -76,14 +76,14 @@ span.glyphicon-star{
 }
 
 img.radio-label {
-	max-height:		1em;
+	max-height:		4.5em;
 	margin-right:	1.25em;
 	margin-left:	-0.3em;
 	margin-top:		0.5em;
 	margin-bottom:	0.5em;
 }
 img.radio-label:hover {
-	max-height:		4em;
+	max-height:		5em;
 	margin-top:		0;
 	margin-bottom:	0;
 }

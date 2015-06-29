@@ -2,9 +2,17 @@
 <html>
 <body>
 	{% include 'hackathon/base.html' %}
+	<style>
+		div.smiley-radio {
+			width:		19%;
+			min-width:	6em;
+			display:	inline-block;
+		}
+	</style>
+	
 	<h1 class="text-center"> {{ title }}</h1> 
 
-	<div class="col-lg-8 col-lg-offset-2" style='background-color: rgba(255,255,255,0.5)'>
+	<!--<div class="col-lg-8 col-lg-offset-2" style='background-color: rgba(255,255,255,0.5)'>
         <div class="table-responsive">
 
             <h1>Rate the Merchant: {{ merchant.username }}</h1>
@@ -43,6 +51,291 @@
               </form>
             </table>
         </div>
-    </div>
+    </div>-->
+
+    
+    <div class="col-md-8 col-md-offset-2">
+		<div class="panel panel-default panel-transparent">
+			<div class="panel-heading"><h1>Rate the Merchant: {{ merchant.username }}</h1></div>
+			<form class="form-horizontal" 
+					id="rating_form" 
+					method="post" 
+					action="{% url 'rate_merchant' merchant.id %}"
+					enctype="multipart/form-data">
+                {% csrf_token %}
+                {% load bootstrap %}
+				<div class="panel-body">
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Name</label>
+						<div class="col-md-7">
+							<input name="name" 
+									placeholder="Name of the provider"
+									required 
+									value="" 
+									class="form-control" 
+									type="text"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Surname</label>
+						<div class="col-md-7">
+							<input name="surname" 
+									placeholder="Surname of the provider"
+									required 
+									value="" 
+									class="form-control" 
+									type="text"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Business Name</label>
+						<div class="col-md-7">
+							<input name="business_name" 
+									placeholder="(Optional) The business name"
+									value="" 
+									class="form-control" 
+									type="text"/>
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Area</label>
+						<div class="col-md-7">
+							<input name="area" 
+									placeholder="(Optional) Where was the work done?"
+									value="" 
+									class="form-control" 
+									type="text"/>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Work done</label>
+						<div class="col-md-7">
+							<input name="work" 
+									placeholder="What did you call them for?"
+									value="" 
+									class="form-control" 
+									type="text"/>
+						</div>
+					</div>
+
+					<div class="form-group" style='margin-top: 3em'>
+						<label class="col-md-3 col-md-offset-1">Quality and Functionality</label>
+						<div class="col-md-7 text-justify">
+							<div class="smiley-radio">
+								<small style="position: absolute;top: -0.75em;">Dissatisfied</small>
+								<input name="quality" 
+										required 
+										value="-2" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/upset.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="quality" 
+										required 
+										value="-1" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/sad.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="quality" 
+										required 
+										value="0" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/ok.png'>
+							</div>
+								
+							<div class="smiley-radio">
+								<input name="quality" 
+										required 
+										value="1" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/happy.png'>
+							</div>
+							
+							<div class="smiley-radio">
+								<span>
+									<input name="quality" 
+											required 
+											value="2" 
+											type="radio"/>
+									<img class='radio-label' src='/static/img/ecstatic.png'>
+									<small style="position: absolute; top: -0.75em;right: 5em;">Exceptional</small>
+								</span>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Reliability</label>
+						<div class="col-md-7">
+							<div class="smiley-radio">
+								<input name="reliability" 
+										required 
+										value="-2" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/upset.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="reliability" 
+										required 
+										value="-1" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/sad.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="reliability" 
+										required 
+										value="0" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/ok.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="reliability" 
+										required 
+										value="1" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/happy.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="reliability" 
+										required 
+										value="2" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/ecstatic.png'>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Value for money</label>
+						<div class="col-md-7">
+							<div class='smiley-radio'>
+								<input name="value" 
+										required 
+										value="-2" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/upset.png'>
+							</div>
+						
+							<div class="smiley-radio">
+								<input name="value" 
+										required 
+										value="-1" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/sad.png'>
+							</div>
+								
+							<div class="smiley-radio">
+								<input name="value" 
+										required 
+										value="0" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/ok.png'>
+							</div>
+	
+							<div class="smiley-radio">
+								<input name="value" 
+										required 
+										value="1" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/happy.png'>
+							</div>
+							
+							<div class="smiley-radio">
+								<input name="value" 
+										required 
+										value="2" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/ecstatic.png'>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Overall</label>
+						<div class="col-md-7">
+							<div class="smiley-radio">
+								<input name="overall" 
+										required 
+										value="-2" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/upset.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="overall" 
+										required 
+										value="-1" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/sad.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="overall" 
+										required 
+										value="0" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/ok.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="overall" 
+										required 
+										value="1" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/happy.png'>
+							</div>
+
+							<div class="smiley-radio">
+								<input name="overall" 
+										required 
+										value="2" 
+										type="radio"/>
+								<img class='radio-label' src='/static/img/ecstatic.png'>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label class="col-md-3 col-md-offset-1">Comment</label>
+						<div class="col-md-7">
+							<textarea name="comment" 
+										placeholder="The work that was done by this provider was absolutely..."
+										class="form-control"
+										rows='5'
+										>
+							</textarea>
+						</div>
+					</div>
+
+				</div>
+				<div class="panel-footer">
+					<div class="form-group">
+						<div class="col-md-4 col-md-offset-4 text-center">
+							<button class='btn btn-primary' >Rate</button>
+							<button class='btn btn-secondary' type="reset">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
 
 </html>
